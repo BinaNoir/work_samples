@@ -14,9 +14,21 @@ class TestProcessNameInput(unittest.TestCase):
         self.assertEqual(name, "")
         self.assertIn("I love numbers", response)
 
-    def test_name(self):
+    def test_name_input(self):
         name, response = validate_name_input("bina")
         self.assertEqual(name, "bina")
+        self.assertIn("Would you like", response)
+        self.assertIn("Bina", response)
+
+    def test_input_with_spaces(self):
+        name, response = validate_name_input("  bina   ")
+        self.assertEqual(name, "bina")
+        self.assertIn("Would you like", response)
+        self.assertIn("Bina", response)
+
+    def test_input_case_insensitiv(self):
+        name, response = validate_name_input("biNa")
+        self.assertEqual(name, "biNa")
         self.assertIn("Would you like", response)
         self.assertIn("Bina", response)
 

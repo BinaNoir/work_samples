@@ -1,6 +1,6 @@
 # Count von Count
 
-by Sabrina Schmütsch
+by Bina Schmütsch
 
 ## Description
 
@@ -19,11 +19,10 @@ In this interactive Python game, you will be greeted by The Count, a friendly (a
 1. Download the project files from the repository.
 2. Open the project folder in Python.
 3. Run the script and follow the instructions in the terminal to input your name. </br>
-   The script will print the sum of the letters in your name.
 
 ## Planned Updates
 
 - Extension to include language selection for German
 - Improvement of interactive responses
 - Improvement of code structure - done
-- Unittesting
+- Unittesting - partly done

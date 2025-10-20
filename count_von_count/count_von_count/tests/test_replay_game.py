@@ -7,6 +7,7 @@ class TestProcessReplayInput(unittest.TestCase):
     def test_input_yes(self):
         game_state, response = process_replay_input("bina", "yes")
         self.assertEqual(game_state, "break")
+        self.assertEqual(response, None)
 
     def test_input_no(self):
         game_state, response = process_replay_input("bina", "no")
@@ -17,3 +18,12 @@ class TestProcessReplayInput(unittest.TestCase):
         game_state, response = process_replay_input("bina", "tes")
         self.assertEqual(game_state, None)
         self.assertIn("Sorry, I didn't", response)
+
+    def test_input_with_spaces(self):
+        game_state, response = process_replay_input("bina", "  yes  ")
+        self.assertEqual(game_state, "break")
+        self.assertEqual(response, None)
+
+
+if __name__ == "__main__":
+    unittest.main()

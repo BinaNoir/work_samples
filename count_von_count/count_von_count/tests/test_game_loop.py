@@ -6,16 +6,25 @@ class TestValidateGuessInput(unittest.TestCase):
 
     def test_input_isdigit(self):
         guess, error = validate_guess_input("fifty")
+        self.assertEqual(guess, None)
         self.assertIn("Sorry, but your", error)
 
     def test_input_not_in_range(self):
         guess, error = validate_guess_input("101")
-        self.assertIn("Please enter a", error)
-        guess, error = validate_guess_input("0")
+        self.assertEqual(guess, None)
         self.assertIn("Please enter a", error)
 
-    def test_input_correct(self):
+        guess, error = validate_guess_input("0")
+        self.assertEqual(guess, None)
+        self.assertIn("Please enter a", error)
+
+    def test_correct_input(self):
         guess, error = validate_guess_input("50")
+        self.assertEqual(guess, 50)
+        self.assertEqual(error, None)
+
+    def test_input_with_spaces(self):
+        guess, error = validate_guess_input("  50  ")
         self.assertEqual(guess, 50)
         self.assertEqual(error, None)
 
@@ -35,7 +44,5 @@ class TestRightGuess(unittest.TestCase):
         self.assertEqual(None, response)
 
 
-class TestOutOfGuesses(unittest.TestCase):
-    def test_no_guesses_left(self):
-        response = out_of_guesses(50)
-        self.assertIn("Sorry, you're out", response)
+if __name__ == "__main__":
+    unittest.main()

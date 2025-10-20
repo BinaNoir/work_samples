@@ -1,11 +1,11 @@
-HOST_INTRODUCTION_TEXT= """\
+HOST_INTRODUCTION_TEXT = """\
 Greetings! It is I, the Count!
 I guess you've heard from me before. 
 I'm well known for my mathematical teaching skills.
 I love to count.
 What's your name?"""
 
-# Possible outputs to ask for a guess returned by draw_random_number().      
+# Possible outputs to ask for a guess returned by draw_random_number().
 GUESS_PROMPT = [
     "Take a guess!",
     "Give me a number!",
@@ -16,10 +16,10 @@ GUESS_PROMPT = [
     "Make a guess!",
     "Tell me a number!",
     "What number do you have in mind?",
-    "Please share your number!"
-] 
+    "Please share your number!",
+]
 
-# Possible outputs to ask for another guess returned by feedback_guess().   
+# Possible outputs to ask for another guess returned by feedback_guess().
 GUESS_AGAIN_PROMPT = [
     " Try again!",
     " Give it another shot!",
@@ -30,11 +30,11 @@ GUESS_AGAIN_PROMPT = [
     " Take a swing at it again!",
     " Give it one more attempt!",
     " Let’s see another guess!",
-    " You can do better, try again!"
+    " You can do better, try again!",
 ]
 
-# Possible outputs if guess is too low returned by feedback_guess().  
-TOO_LOW_FEEDBACK =[
+# Possible outputs if guess is too low returned by feedback_guess().
+TOO_LOW_FEEDBACK = [
     "Your guess is too low.",
     "That guess is below the target.",
     "Too low!",
@@ -44,8 +44,8 @@ TOO_LOW_FEEDBACK =[
     "You're below the mark.",
     "That number is too small.",
     "You might want to go higher.",
-    "Try a number that's more than that."
-] 
+    "Try a number that's more than that.",
+]
 
 # Possible outputs if guess is too high returned by feedback_guess().
 TOO_HIGH_FEEDBACK = [
@@ -59,5 +59,5 @@ TOO_HIGH_FEEDBACK = [
     "You're above the mark.",
     "That number is too large.",
     "You might want to go lower.",
-    "Try a number that's less than that."
+    "Try a number that's less than that.",
 ]
