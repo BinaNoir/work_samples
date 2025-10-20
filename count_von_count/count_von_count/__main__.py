@@ -1,26 +1,18 @@
 from .utils import typewriter
 from .constants import HOST_INTRODUCTION_TEXT
-from .username import (
-    get_username,
-)
-
+from .username import get_username
 from .start_game import game_init
-from .game_loop import (
-    draw_random_number,
-    feedback_guess,
-    end_of_game,
-)
+from .game_loop import guess_init, draw_random_number
 from .replay_game import replay
 
 
 def main():
     typewriter(HOST_INTRODUCTION_TEXT)
     name = get_username()
-    game_init()
+    game_init(name)
     while True:
-        my_number = draw_random_number()
-        guesses_taken, my_number, guess = feedback_guess(my_number)
-        end_of_game(guesses_taken, my_number, guess)
+        random_number = draw_random_number()
+        guess_init(random_number)
         replay(name)
 
 

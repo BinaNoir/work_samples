@@ -1,7 +1,7 @@
 from .utils import typewriter
 
 
-def process_name_input(raw_input):
+def validate_name_input(raw_input):
 
     name = raw_input.strip()
 
@@ -28,6 +28,6 @@ def get_username():
     name = ""
     while name == "":
         raw_input = input()
-        name, reply = process_name_input(raw_input)
-        typewriter(reply)
+        name, response = validate_name_input(raw_input)
+        typewriter(response)
     return name
