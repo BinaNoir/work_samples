@@ -1,28 +1,50 @@
 # Count von Count
-
-by Bina Schmütsch
+*Version 2.2.0* </br>
+by *Bina Schmütsch*
 
 ## Description
 
-In this interactive Python game, you will be greeted by The Count, a friendly (and slightly dramatic) character who loves numbers. He will challenge you to a fun guessing game where you must guess a randomly chosen number between 1 and 100.
+In this interactive Python game you will be greeted by The Count, a friendly (and slightly dramatic) character who loves numbers. He will challenge you to a fun guessing game where you must guess a randomly chosen number between 1 and 100.
 
-## Usage
+## Installation
+1. Download Python 3.3.17 (or later) from https://www.python.org/ and install it.
+2. Open your terminal:<br>
+Linux: `[strg] + [alt] + [t]`<br>
+Windows: `[win] + [X]` → `wt` → `[Enter]`
+3. Clone this repository:   
+```bash
+git clone https://github.com/BinaNoir/workSamples/tree/main/count_von_count
+```
+4. Change directory to the repository:
+```bash
+cd count_von_count
+```
 
-### Install Python
+## Play the game
+Run the main programm:
+```bash
+python -m count_von_count.__main__
+```
 
-1. Download Python from https://www.python.org/.
-2. Run the installer. </br>
-   Make sure to check the box to have Python added to your PATH if the installer offers such an option.
+## Unittests
+Run all unittests: 
+```bash
+python -m unittest count_von_count.tests
+```
+Test a specific module: 
+```bash
+python -m unittest count_von_count.MODULNAME
+```
 
-### Run Main Program
+## Updates
+### v2.2.0
+- Refactored code style for PEP 8 compliance
+- Modularized codebase
+- Added unittests
+- Improved README.md
 
-1. Download the project files from the repository.
-2. Open the project folder in Python.
-3. Run the script and follow the instructions in the terminal to input your name. </br>
-
-## Planned Updates
-
-- Extension to include language selection for German
-- Improvement of interactive responses
-- Improvement of code structure - done
-- Unittesting - partly done
+### Planned Updates
+- Add language selection
+- Improve interactive dialogue
+- Add randomized test coverage
+- Define key variables as globals for easier configuration

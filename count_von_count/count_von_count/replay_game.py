@@ -1,12 +1,12 @@
 import sys
-
 from .utils import typewriter
 
 
 def process_replay_input(name, raw_input):
     user_input = raw_input.strip().lower()
+
     if user_input == "yes":
-        return "break", None
+        return "break", ""
     elif user_input == "no":
         return "exit", (
             f"Thank you for playing! "
@@ -20,11 +20,14 @@ def process_replay_input(name, raw_input):
 def replay(name):
     typewriter("Would you like to play another round? (yes/no)")
     user_input = None
+
     while user_input == None:
         raw_input = input()
         game_state, response = process_replay_input(name, raw_input)
         typewriter(response)
+
         if game_state == "break":
             break
-        if game_state == "exit":
+
+        elif game_state == "exit":
             sys.exit()

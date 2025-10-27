@@ -1,5 +1,5 @@
 import unittest
-from ..game_loop import validate_guess_input, right_guess, out_of_guesses
+from ..game_loop import validate_guess_input, check_right_guess, out_of_guesses
 
 
 class TestValidateGuessInput(unittest.TestCase):
@@ -29,18 +29,18 @@ class TestValidateGuessInput(unittest.TestCase):
         self.assertEqual(error, None)
 
 
-class TestRightGuess(unittest.TestCase):
+class TestCheckRightGuess(unittest.TestCase):
 
     def test_win_in_1_guess(self):
-        response = right_guess(50, 50, 1)
+        response = check_right_guess(50, 50, 1)
         self.assertIn("in 1 guess", response)
 
     def test_win_in_mulitple_guesses(self):
-        response = right_guess(50, 50, 2)
+        response = check_right_guess(50, 50, 2)
         self.assertIn("in 2 guesses", response)
 
     def test_no_win(self):
-        response = right_guess(51, 50, 1)
+        response = check_right_guess(51, 50, 1)
         self.assertEqual(None, response)
 
 

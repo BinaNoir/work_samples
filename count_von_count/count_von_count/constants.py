@@ -1,11 +1,10 @@
-HOST_INTRODUCTION_TEXT = """\
-Greetings! It is I, the Count!
-I guess you've heard from me before. 
-I'm well known for my mathematical teaching skills.
-I love to count.
-What's your name?"""
+HOST_INTRODUCTION_TEXT = (
+    "Greetings! It is I, the Count! I guess you've heard from me before. "
+    "I'm well known for my mathematical teaching skills. I love to count. "
+    "What's your name?"
+)
 
-# Possible outputs to ask for a guess returned by draw_random_number().
+# Possible output to ask for a guess.
 GUESS_PROMPT = [
     "Take a guess!",
     "Give me a number!",
@@ -19,7 +18,7 @@ GUESS_PROMPT = [
     "Please share your number!",
 ]
 
-# Possible outputs to ask for another guess returned by feedback_guess().
+# Possible output to ask for another guess.
 GUESS_AGAIN_PROMPT = [
     " Try again!",
     " Give it another shot!",
@@ -33,7 +32,7 @@ GUESS_AGAIN_PROMPT = [
     " You can do better, try again!",
 ]
 
-# Possible outputs if guess is too low returned by feedback_guess().
+# Possible outputs if guess is too low.
 TOO_LOW_FEEDBACK = [
     "Your guess is too low.",
     "That guess is below the target.",
@@ -47,7 +46,7 @@ TOO_LOW_FEEDBACK = [
     "Try a number that's more than that.",
 ]
 
-# Possible outputs if guess is too high returned by feedback_guess().
+# Possible outputs if guess is too high.
 TOO_HIGH_FEEDBACK = [
     "Your guess is too high.",
     "That guess is above the target.",

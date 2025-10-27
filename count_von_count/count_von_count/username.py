@@ -2,16 +2,15 @@ from .utils import typewriter
 
 
 def validate_name_input(raw_input):
-
     name = raw_input.strip()
 
     if not name:
-        return "", (
+        return None, (
             "Don't be shy! Please tell me your name."
             "Your input can't be empty."
         )
     elif not name.isalpha():
-        return "", (
+        return None, (
             "I love numbers and symbols..."
             "But now I like to get some letters."
             "(Your input can only contain letters.)"
@@ -25,8 +24,9 @@ def validate_name_input(raw_input):
 
 def get_username():
     """Getting the username through a dialogue."""
-    name = ""
-    while name == "":
+    name = None
+
+    while name == None:
         raw_input = input()
         name, response = validate_name_input(raw_input)
         typewriter(response)
