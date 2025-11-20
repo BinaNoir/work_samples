@@ -1,6 +1,6 @@
 # Count von Count
 *Version 2.2.0* </br>
-by *Bina Schmütsch*
+by *BinaNoir*
 
 ## Description
 
